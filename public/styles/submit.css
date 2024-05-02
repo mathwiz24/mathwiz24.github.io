@@ -51,7 +51,7 @@ body {
 
 #lemon24k {
     text-decoration: none;
-    color: #9799B9;
+    color: black;
 }
 
 #home {
@@ -98,13 +98,11 @@ body {
     text-align: justify;
 }
 
-
 .text-box {
     padding: 20px;
     border-radius: 30px;
     background-color: #ffffff;
 }
-
 
 /* Bottom Bar */
 
