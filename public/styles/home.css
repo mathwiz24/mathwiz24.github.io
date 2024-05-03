@@ -84,13 +84,13 @@ body {
 
 #about {
     border-radius: 30px; 
-    width: 40%;
+    width: 50%;
     text-align: center;
     font-size:  15px;
     text-decoration: none;
     border: 10px solid #373851;
     padding:20px ;
-    margin: 10px;
+    margin: 30px 40px;
     background-color: #D5D6E9;
 }
 
@@ -105,6 +105,11 @@ body {
     background-color: #ffffff;
 }
 
+.character {
+    right: 0px;
+    top: 100px;
+    position: fixed;
+}
 
 /* Bottom Bar */
 
@@ -127,3 +132,4 @@ body {
     pointer-events: none;
     z-index: 99999999; /* so that it stays on top of all other elements */
 }
+
