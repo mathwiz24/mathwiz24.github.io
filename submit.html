@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="public\styles\submit.css" />
 </head>
 <body>
+    <!--
+        Navigation bar
+    -->
     <div class ="navbar">
         <div id = "first">
             <a class = link href = 'home.html'> HOME </a>
@@ -18,11 +21,30 @@
         </div>
     </div>
 
+    <!--
+        Title
+    -->
     <div id = "center-text">
         <p> Submission </p>
     </div>
 
-    <img class = profile src = "public\images\profile.png" >
+    <div id="container">
+        <img class = profile src = "public\images\profile.png">
+        
+        <label for="fileUpload">Upload your submission!</label>
+        <input type="file" id="fileUpload" accept="image/png, image/jpeg">
+        
+        <label for="eventSelector">Select the event you are participating in:</label>
+        <select name="event" id="eventSelector">
+            <option value="sweet">Sweet Shop</option>
+            <option value="sounds">Sounds of Creativity</option>
+            <option value="cd">Combination Domination</option>
+        </select>
+        <img id="uploadedImg">
+        <p id="errorMsg"></p>
+        <button id="uploadButton">Submit!</button>
+    </div>
+    
 
 
     <div class="circle"></div>
@@ -37,7 +59,10 @@
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
+
+    <script src="scripts.js"></script>
+    <script src="submit.js" type="module"></script>
 
 </body>
-<script src="scripts.js"></script>
+
 </html>

@@ -1,4 +1,4 @@
-const palette = document.getElementById("palette");
+//const palette = document.getElementById("palette");
 const button = document.getElementById("button");
 const word = document.getElementById("word");
 const block1 = document.getElementById("block1");
@@ -39,7 +39,7 @@ async function setPalette() {
   const hex5 = paletteData[4]['hex']['value'];
 
 
-  palette.innerHTML = hex1 + " , " + hex2 + " , " + hex3 + " , " + hex4 + " , " + hex5;
+  //palette.innerHTML = hex1 + " , " + hex2 + " , " + hex3 + " , " + hex4 + " , " + hex5;
   block1.style.backgroundColor = hex1;
   block2.style.backgroundColor = hex2;
   block3.style.backgroundColor = hex3;
