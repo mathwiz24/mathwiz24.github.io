@@ -1,20 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
 
