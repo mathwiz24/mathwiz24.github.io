@@ -28,10 +28,12 @@ uploadButton.onclick = async (evt) => {
 
     if (fileUpload.files.length == 0) {
         console.log("no file uploaded");
+        errorText.style.color = "red";
         errorText.innerHTML = "Upload a file first!";
     } else {
         console.log("Image uploading begin");
-        errorText.innerHTML = "";
+        errorText.style.color = "black";
+        errorText.innerHTML = "Uploading...";
         const file = fileUpload.files[0];
         const storageRef = ref(storage, 'images/' + file.name);
         const eventName = eventSelector.value;
@@ -47,6 +49,8 @@ uploadButton.onclick = async (evt) => {
                     fileName: file.name,
                     author: "None"
                 });
+                errorText.style.color = "green";
+                errorText.innerHTML = `Upload success! View your submission <a href="https://mathwiz24.github.io/${eventName}">here</a>!`;
                 console.log("save end");
             });
         });
