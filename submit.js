@@ -44,6 +44,7 @@ uploadButton.onclick = async (evt) => {
                 await addDoc(submissionsCollection, {
                     URL: url,
                     event: eventName,
+                    fileName: file.name,
                     author: "None"
                 });
                 console.log("save end");

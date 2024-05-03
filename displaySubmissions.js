@@ -12,7 +12,7 @@ const firebaseConfig = {
     storageBucket: "cubstart-final-project-4de18.appspot.com",
     messagingSenderId: "324894554328",
     appId: "1:324894554328:web:cfb4a75ed9a8485627ffad"
-  };
+};
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -22,10 +22,17 @@ console.log("Building query");
 const q = query(submissionCollection, where("event", "==", eventName));
 const submissionDocs = await getDocs(q);
 console.log(submissionDocs);
+
+let rendered = [];
+
 submissionDocs.forEach((doc) => {
-    const img = document.createElement('img');
-    img.src = doc.data().URL;
-    img.width = 400;
-    img.height = 300;
-    imageContainer.appendChild(img);
-})
+    const docData = doc.data()
+    if (!rendered.includes(docData.filename)) {
+      rendered.push(docData.filename);
+      const img = document.createElement('img');
+      img.src = doc.data().URL;
+      img.width = 400;
+      img.height = 300;
+      imageContainer.appendChild(img);
+    }
+});
