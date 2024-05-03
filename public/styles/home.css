@@ -107,8 +107,8 @@ body {
 
 .character {
     right: 0px;
-    top: 100px;
-    position: fixed;
+    bottom: 0;
+    position: absolute;
 }
 
 /* Bottom Bar */
