@@ -1,14 +1,8 @@
-const palette = document.getElementById("palette");
+const image = document.getElementById("image");
 const button = document.getElementById("button");
 const word = document.getElementById("word");
-const block1 = document.getElementById("block1");
-const block2 = document.getElementById("block2");
-const block3 = document.getElementById("block3");
-const block4 = document.getElementById("block4");
-const block5 = document.getElementById("block5");
 
-async function getPalette() {
-    const clean_hex =(Math.random() * 0xFFFFFF << 0).toString(16).padStart(5, '0');
+async function getImage() {
     const url = "https://www.thecolorapi.com/scheme?hex="+ clean_hex +"&count=6&mode=analogic-complement"
     const response = await fetch(url,{
       method:"GET"
@@ -28,7 +22,7 @@ async function getWord() {
     return data
 }
   
-async function setPalette() {
+async function setImage() {
 
   const paletteData = await getPalette();
 

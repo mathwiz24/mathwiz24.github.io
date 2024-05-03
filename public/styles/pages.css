@@ -103,7 +103,7 @@ body {
     padding:20px ;
     margin: 10px;
     background-color: #D5D6E9;
-    width: 70%;
+    width: 60%;
 }
 
 
@@ -122,6 +122,32 @@ body {
     background-color: #ffffff;
 }
 
+.community-submissions {
+    border-radius: 30px; 
+    align-self: auto;
+    text-align: center;
+    font-size:  10px;
+    text-decoration: none;
+    border: 10px solid #373851;
+    padding:20px ;
+    margin: 10px;
+    background-color: #D5D6E9;
+}
+
+#submissions {
+    display: flex;
+    flex-direction: row;
+}
+
+.colors {
+    display: flex;
+    flex-direction: row;
+}
+
+.block {
+    width: 200px;
+    height:50px;
+}
 
 /* Bottom Bar */
 
@@ -143,4 +169,11 @@ body {
     left: 0;
     pointer-events: none;
     z-index: 99999999; /* so that it stays on top of all other elements */
+}
+
+#image{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 10px;
 }
