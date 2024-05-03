@@ -26,12 +26,12 @@ console.log(submissionDocs);
 let rendered = [];
 
 submissionDocs.forEach((doc) => {
-    const docData = doc.data()
-    if (!rendered.includes(docData.filename)) {
-      rendered.push(docData.filename);
+    console.log(doc.data().fileName);
+    if (!rendered.includes(doc.data().fileName)) {
+      rendered.push(doc.data().fileName);
       const img = document.createElement('img');
       img.src = doc.data().URL;
-      img.width = 400;
+      img.width = 400; 
       img.height = 300;
       imageContainer.appendChild(img);
     }
